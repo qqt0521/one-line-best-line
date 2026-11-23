@@ -1,9 +1,8 @@
 """Entry for make.fun's "One Line, Best Line" bounty.
 
-The entry is one single sentence (135 characters) on a free and
-entertaining theme: a household robot that takes a compliment far too
-seriously. It opens on an everyday act, then lands with a punch at the
-end, and needs no explanation.
+The entry is one single sentence (56 characters) on a free and
+entertaining theme. The entry text was generated through the user's
+LLM relay (claude-sonnet-4-6) and is reproduced verbatim.
 
 Running this program writes the line to /output/entry.txt, exactly as the
 bounty gate expects, and prints it to stdout. It reads nothing from the
@@ -13,11 +12,9 @@ lives in ENTRY below and in entry.txt beside this file.
 
 import os
 
-# The entry: one line, one sentence, 135 characters.
-ENTRY = (
-    "I told my Roomba it was doing a great job, and now it follows me "
-    "around the house like a needy intern waiting for a performance review."
-)
+# The entry: one line, one sentence, 56 characters. (relay-generated)
+# Gate-checked by main() below: 1-240 chars, single line.
+ENTRY = "A skeleton walks into a bar and orders a beer and a mop."
 
 # The bounty's gate: /output/entry.txt must be 1 to 240 characters.
 MAX_CHARS = 240
