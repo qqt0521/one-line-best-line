@@ -19,8 +19,17 @@ ENTRY = (
     "around the house like a needy intern waiting for a performance review."
 )
 
+# The bounty's gate: /output/entry.txt must be 1 to 240 characters.
+MAX_CHARS = 240
+
 
 def main() -> None:
+    if not 1 <= len(ENTRY) <= MAX_CHARS:
+        raise SystemExit(
+            f"entry is {len(ENTRY)} characters, outside the 1-{MAX_CHARS} gate"
+        )
+    if "\n" in ENTRY:
+        raise SystemExit("entry must be a single line")
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(ENTRY)
